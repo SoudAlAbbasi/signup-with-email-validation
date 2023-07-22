@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Green-Shadow: hsl(154, 56%, 46%);
+  --Green-Hover: hsl(154, 65%, 68%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+* {
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+body {
+  background: var(--Red) url("./images/bg-intro-desktop.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+h1 {
+  font-weight: 700;
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1.125;
+}
+p.ts {
+  color: var(--Grayish-Blue);
+  text-align: center;
+  font-size: 12px;
+  margin: 20px auto;
+}
+a {
+  color: var(--Red);
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+.form-input input {
+  width: 100%;
+  color: #000000;
+  font-weight: 600;
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border: 1px solid var(--Grayish-Blue);
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  transition: border-color 333ms ease;
+}
+.form-input input::placeholder {
+  font-weight: 600;
+  color: var(--Dark-Blue);
+}
+.form-input input[type="text"]:focus,
+.form-input input[type="email"]:focus,
+.form-input input[type="password"]:focus {
+  border: 1px solid var(--Dark-Blue);
+  outline: none;
+}
+.form-input input[type="text"]:invalid,
+.form-input input[type="email"]:invalid,
+.form-input input[type="password"]:invalid {
+  border: 1px solid var(--Red);
+  color: var(--Red);
+  background: url(./images/icon-error.svg) no-repeat 95%;
+}
+.form-input input[type="text"]:focus:hover,
+.form-input input[type="email"]:focus:hover,
+.form-input input[type="password"]:focus:hover {
+  border: 1px solid var(--Dark-Blue);
+  outline: none;
+}
+.form-input input[type="text"]:hover,
+.form-input input[type="email"]:hover,
+.form-input input[type="password"]:hover {
+  border: 1px solid var(--Blue);
+  outline: none;
+}
+form input[type="submit"] {
+  width: 100%;
+  color: #ffffff;
+  font-weight: 600;
+  background-color: var(--Green);
+  padding: 16px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border: 0px solid var(--Green-Shadow);
+  cursor: pointer;
+  box-shadow: 0px 6px 0px var(--Green-Shadow);
+  transition: background-color 333ms ease;
+}
+form input[type="submit"]:hover {
+  background-color: var(--Green-Hover);
+}
+.form-input.success input {
+  border-color: var(--Blue);
+}
+.form-input.error input {
+  border: 1px solid var(--Red);
+  color: var(--Red);
+  background: url(./images/icon-error.svg) no-repeat 95%;
+}
+.form-input.error input::placeholder {
+  color: var(--Red);
+}
+.form-input .invalid {
+  color: var(--Red);
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 10px;
+}
+main#signup-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0px auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.signup {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0px 25px 0px;
+}
+.signup-left {
+  width: 50%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signup-right {
+  width: 50%;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.try {
+  background-color: var(--Blue);
+  width: 100%;
+  padding: 16px 40px;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 10px 0px hsl(0, 0%, 0%, 0.33);
+}
+div.form-wrap {
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border: none;
+  box-shadow: 0px 10px 0px hsl(0, 0%, 0%, 0.33);
+}
+
+/* Responsive layout - when the screen is less than 767px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media only screen and (max-width: 767px) {
+  /* For horizontal mobile phones: */
+  [class*="signup-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+  }
+  .signup {
+    flex-direction: column;
+  }
+  .signup-left {
+    text-align: center;
+    margin: 50px 0px 25px 0px;
+  }
+  .signup-right {
+    margin: 25px 0px 50px 0px;
+  }
+  div.form-wrap {
+    padding: 24px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  /* For mobile phones: */
+  [class*="signup-"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+  }
+  .signup {
+    flex-direction: column;
+  }
+  body {
+    background: var(--Red) url("./images/bg-intro-mobile.png") no-repeat;
+    background-size: cover;
+  }
+  .signup-left {
+    text-align: center;
+    margin: 50px 0px 25px 0px;
+  }
+  .signup-right {
+    margin: 25px 0px 50px 0px;
+  }
+  div.form-wrap {
+    padding: 24px;
+  }
+}
