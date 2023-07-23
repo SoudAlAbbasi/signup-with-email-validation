@@ -1,4 +1,5 @@
 const id = (id) => document.getElementById(id);
+const placeholder = (placeholder) => document.getAttribute(placeholder);
 const firstName = id("fname"),
 	lastName = id("lname"),
 	email = id("email"),
@@ -32,24 +33,24 @@ const validateInputs = () => {
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
 	if (firstNameValue === '') {
-		setError(firstName, 'First Name cannot be empty');
+		setError(firstName, firstName.placeholder + " cannot be empty");
 	} else {
 		setSuccess(firstName);
 	}
 	if (lastNameValue === '') {
-		setError(lastName, 'Last Name cannot be empty');
+		setError(lastName, lastName.placeholder + " cannot be empty");
 	} else {
 		setSuccess(lastName);
 	}
 	if (emailValue === '') {
-		setError(email, 'Email Address cannot be empty');
+		setError(email, email.placeholder + " cannot be empty");
 	} else if (!isValidEmail(emailValue)) {
 		setError(email, 'Looks like this is not an email');
 	} else {
 		setSuccess(email);
 	}
 	if (passwordValue === '') {
-		setError(password, 'Password cannot be empty');
+		setError(password, password.placeholder + " cannot be empty");
 	} else if (passwordValue.length < 8) {
 		setError(password, 'Password must be at least 8 character long')
 	} else {
