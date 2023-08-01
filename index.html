@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="24x24" type="image/svg+xml" href="./images/icon-error.svg">
-    <link rel="stylesheet" href="./styles.css">
-    <script defer src="./scripts.js"></script>
+    <link rel="stylesheet" href="./style-ltr.css">
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
@@ -22,23 +21,19 @@
           <div class="form-wrap">
             <form action="/" id="form" method="get" autocomplete="on">
               <div class="form-input">
-                <input type="text" id="fname" placeholder="First Name" title="Fill in your first name. Use letters only." 
-                pattern="[A-Za-z ]+" maxlength="99" />
+                <input type="text" id="fname" placeholder="First Name" title="Fill in your first name. Use letters only." pattern="[A-Za-z ]+" maxlength="99" />
                 <div class="invalid"></div>
               </div>
               <div class="form-input">
-                <input type="text" id="lname" placeholder="Last Name" title="Fill in your last name. Use letters only." 
-                pattern="[A-Za-z ]+" maxlength="99" />
+                <input type="text" id="lname" placeholder="Last Name" title="Fill in your last name. Use letters only." pattern="[A-Za-z ]+" maxlength="99" />
                 <div class="invalid"></div>
               </div>
               <div class="form-input">
-                <input type="text" id="email" placeholder="Email Address" title="Fill in your email address properly." 
-                maxlength="99" autocomplete="username"/>
+                <input type="text" id="email" placeholder="Email Address" title="Fill in your email address properly." maxlength="99" autocomplete="username" />
                 <div class="invalid"></div>
               </div>
               <div class="form-input">
-                <input type="password" id="password" title="Must contain at least 8 or more characters." 
-                maxlength="99" placeholder="Password" autocomplete="current-password"/>
+                <input type="password" id="password" title="Must contain at least 8 or more characters." maxlength="99" placeholder="Password" autocomplete="current-password" />
                 <div class="invalid"></div>
               </div>
               <div class="invalid"></div>
@@ -50,5 +45,6 @@
         </div>
       </div>
     </main>
+    <script defer src="./scripts.js"></script>
   </body>
 </html>
